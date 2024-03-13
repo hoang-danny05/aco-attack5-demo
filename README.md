@@ -11,6 +11,14 @@ sudo apt install node;
 sudo apt install npm;
 ```
 
+### Getting the code:
+- you can use git to get the code
+```bash
+sudo apt install git; # only if you don't have git
+git clone https://github.com/hoang-danny05/aco-attack5-demo/tree/master
+```
+
+
 ### other notes
 - install.sh has the commands necessary to install all of the website's dependencies
 - run.sh has all of the commands necessary to run the website 
