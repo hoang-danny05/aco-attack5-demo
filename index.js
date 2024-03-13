@@ -86,8 +86,7 @@ app.get("/", (req, res) => {
 // })
 
 //the website will listen on port 8080.
-// visit localhost:8080 when running the server
-// WILL ONLY BE VISIBLE ON THE SAME MACHINE 
-// app.listen(8080, "172.21.109.129")
+// from the virtual machine: localhost:8080
+// accessing from host machine: [Virtual Machine IP]:8080
 app.listen(8080)
 
