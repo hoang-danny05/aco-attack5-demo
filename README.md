@@ -4,7 +4,14 @@ This is a website that i made using node and express!
 
 ## How to use
 
-- make sure you have node installed. If you don't, i suggest you install nvm.
+### Prerequisites:
+- node and npm must be installed.
+```bash
+sudo apt install node;
+sudo apt install npm;
+```
+
+### other notes
 - install.sh has the commands necessary to install all of the website's dependencies
 - run.sh has all of the commands necessary to run the website 
 - index.js is the main source code for the entire website. Have at it!
