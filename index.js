@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
   // I could have made this more fancy, but this is the easiest form to read
   s += `
   <script>
-    function test() {
+    function posttext() {
       // visible in inspect element
       console.log("clicked!!");
 
@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
 
   //the input form for the user
   s += `
-  <form onsubmit="test(); return false"> 
+  <form onsubmit="posttext(); return false"> 
     <label for="body">Text:</label>
     <input type="text" id="body">
     <input type="submit" value="Post">
