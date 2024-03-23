@@ -36,8 +36,6 @@ app.get("/", (req, res) => {
   s += `
   <script>
     function posttext() {
-      // visible in inspect element
-      console.log("clicked!!");
 
       const text = document.getElementById("body");
       console.log(text.value);
@@ -46,6 +44,15 @@ app.get("/", (req, res) => {
       console.log(current);
 
       document.getElementById("output").innerHTML = current + "<br />Post: " + filter(text.value);
+    }
+
+    function postimage() {
+      const src = document.getElementById("imgform")
+      console.log(src.value)
+      
+      const current = document.getElementById("output").innerHTML;
+
+      document.getElementById("output").innerHTML = current + "<br /> <img height=\'200\' src=" + filter(src.value) + ">";
     }
   </script>
   `
@@ -56,6 +63,12 @@ app.get("/", (req, res) => {
     <label for="body">Text:</label>
     <input type="text" id="body">
     <input type="submit" value="Post">
+  </form>
+
+  <form onsubmit="postimage(); return false"> 
+    <label for="imgform">Source:</label>
+    <input type="text" id="imgform">
+    <input type="submit" value="Create Image">
   </form>
   `
 
