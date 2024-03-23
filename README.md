@@ -18,6 +18,18 @@ sudo apt install git; # only if you don't have git
 git clone https://github.com/hoang-danny05/aco-attack5-demo
 ```
 
+### Running the website
+- Before running the website, you should check your VM's IP with "ifconfig". Make sure your WiFi adapter is bridged. If it works correctly, you should be able to access the website from any machine on the local network. 
+- Once "npm i" has been successfully run within the aco-attack5-demo directory, you can run the website with the following command:
+```bash
+npx nodemon index.js
+```
+- Your server should now be running on <ins>[Virtual Machine IPv4]:8080</ins>
+- To test the server's functionality from Kali, you can type:
+```bash
+curl localhost:8080
+```
+- This should return the server's HTML code necessary to display the website's information. Since we want cleaner server-side code, I purpousefully made the HTML as compact and as readable as possible.
 
 ### other notes
 - install.sh has the commands necessary to install all of the website's dependencies. It simply runs "npm i", but if we add any other dependencies, we can add their commands here as well. You can run any .sh file with "bash filename.sh"
