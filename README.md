@@ -1,6 +1,6 @@
 # ACO 499 Demo Website
 
-This is a website that i made using node and express!
+This is a website that i made using node and express! If you're interested in web development, this should give you some good experience with the technolgies used when making APIs and websites.
 
 ## How to use
 
@@ -15,13 +15,13 @@ sudo apt install npm;
 - you can use git to get the code
 ```bash
 sudo apt install git; # only if you don't have git
-git clone https://github.com/hoang-danny05/aco-attack5-demo/tree/master
+git clone https://github.com/hoang-danny05/aco-attack5-demo
 ```
 
 
 ### other notes
-- install.sh has the commands necessary to install all of the website's dependencies
-- run.sh has all of the commands necessary to run the website 
+- install.sh has the commands necessary to install all of the website's dependencies. It simply runs "npm i", but if we add any other dependencies, we can add their commands here as well. You can run any .sh file with "bash filename.sh"
+- run.sh has all of the commands necessary to run the website. 
 - index.js is the main source code for the entire website. Have at it!
 
 ## Other Information that you might find useful
