@@ -15,7 +15,8 @@ sudo apt install npm;
 - you can use git to get the code
 ```bash
 sudo apt install git; # only if you don't have git
-git clone https://github.com/hoang-danny05/aco-attack5-demo
+git clone https://github.com/hoang-danny05/aco-attack5-demo.git
+#.git is optional for some machines
 ```
 
 ### Running the website
