@@ -32,10 +32,12 @@ curl localhost:8080
 ```
 - This should return the server's HTML code necessary to display the website's information. Since we want cleaner server-side code, I purpousefully made the HTML as compact and as readable as possible.
 
+- You can change the filename to choose which version of the script you want to use. 
 ### other notes
 - install.sh has the commands necessary to install all of the website's dependencies. It simply runs "npm i", but if we add any other dependencies, we can add their commands here as well. You can run any .sh file with "bash filename.sh"
 - run.sh has all of the commands necessary to run the website. 
-- index.js is the main source code for the entire website. Have at it!
+- index.js is the main source code for the entire website. Have at it! (this was engineered by red team to be purpousefully vulnerable)
+- indexT.js contains blue team's defenses. 
 
 ## Other Information that you might find useful
 
