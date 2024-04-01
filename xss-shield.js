@@ -1,9 +1,8 @@
-// THIS IS THE ENTRY POINT FOR MY APPLICATION
-//
-
 import express from "express"
+import xssShield from 'xss-shield'
 
 const app = express()
+console.log(xssShield)
 
 function stringify(s) {
   return JSON.stringify(s)
@@ -87,16 +86,13 @@ app.get("/", (req, res) => {
  * takes in the first path after root as anything.
  * the path taken is stored as req.params.test
  * -----------------------------------------------*/
-// app.get("/:test", (req, res) => {
-//   console.log("GET request received!")
-//   console.log(req.params)
-//   console.log(req.query)
-//   let s = "THIS IS THE WEBSITE"
-//   s += `: ${req.method} to ${req.url}`
-//   s += `<br/> Parameters: ${stringify(req.params)}`
-//   s += `<br/> Query: ${stringify(req.query)}`
-//   res.send(s)
-// })
+
+app.use(xssShield.default.xssShield({
+  whitelist: {
+    a: ['href', 'title', 'target'],
+    img: ['src', 'alt']
+  }
+}))
 
 //the website will listen on port 8080.
 // from the virtual machine: localhost:8080

@@ -1,5 +1,5 @@
 // THIS IS THE ENTRY POINT FOR MY APPLICATION
-//
+//Nicole's implementation
 
 import express from "express"
 
@@ -22,7 +22,8 @@ app.get("/", (req, res) => {
   s += `: ${req.method} to ${req.url}<br />`
 
   // potential function to filter stuff :) 
-  // blue team you know what to do
+    // blue team you know what to do  
+  res.setHeader("Content-Security-Policy", "script-src 'none'") //N: for script executin, don't execute any 
   s += `
   <script>
     function filter(input) {
